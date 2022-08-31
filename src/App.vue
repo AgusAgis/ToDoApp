@@ -37,7 +37,7 @@ export default {
         this.copyTodos =[...this.todos];
       } else{
         const temp = this.todos.filter(todo =>{
-          return todo.title.toLowerCase().includes(query)
+          return todo.title.toUpperCase().includes(query.toUpperCase())
         });
         this.copyTodos = [...temp]
       }
@@ -45,33 +45,7 @@ export default {
   },
   data(){
     return{
-      todos: [
-        {
-          id: 0,
-          title:  'Cocinar la cena',
-          completed: false
-        },
-        {
-         id: 1,
-         title: 'Sacar a pasear a Pietra',
-         completed: true
-       },
-       {
-         id: 2,
-         title: 'Estudiar',
-         completed: false
-       },
-       {
-         id: 3,
-         title: 'Comprar regalo de madre',
-         completed: true
-       },
-       {
-         id: 4,
-         title: 'Comprar regalo del niñe',
-         completed: true
-       }
-      ],
+      todos: [],
       copyTodos: []
     }
   },
