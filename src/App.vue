@@ -1,7 +1,9 @@
 <template>
   <div>
       <div id="header">
+       
         <SearchItem v-on:query-change="querySearch"/>
+        
       </div>
       <div id="main-container">
         <h2>Todos</h2>
